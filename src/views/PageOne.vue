@@ -41,7 +41,7 @@
         },
         created() {
             const _this=this
-            axios.get('http://localhost:8181/book/findAll/0/3').then(function (resp) {
+            axios.get('http://39.106.173.77:8181/book/findAll/0/3').then(function (resp) {
                 _this.tableData=resp.data.content;
                 _this.totalElements=resp.data.totalElements;
             })
@@ -49,7 +49,7 @@
         methods: {
            page(currentpage){
                const _this=this
-               axios.get('http://localhost:8181/book/findAll/'+(currentpage-1)+'/3').then(function (resp) {
+               axios.get('http://39.106.173.77:8181/book/findAll/'+(currentpage-1)+'/3').then(function (resp) {
                    _this.tableData=resp.data.content;
                    _this.totalElements=resp.data.totalElements;
                })

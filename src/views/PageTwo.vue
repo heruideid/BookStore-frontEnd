@@ -38,7 +38,7 @@
             submitForm(formName) {
                 this.$refs[formName].validate((valid) => {
                     if (valid) {
-                        axios.post('http://localhost:8181/book/addBook',this.ruleForm).then(function (resp) {
+                        axios.post('http://39.106.173.77:8181/book/addBook',this.ruleForm).then(function (resp) {
                             if(resp.data=="success"){
                                 alert("添加成功")
                             }
